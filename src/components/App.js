@@ -8,6 +8,7 @@ export default class App extends Component {
     super(props);
     this.state = {
       results: [],
+      selectedPost: [],
     };
   }
   componentWillMount() {

@@ -3,7 +3,10 @@ import "./PostPreview.css";
 
 function PostPreview(props) {
   return (
-    <div>
+    <div
+      // eslint-disable-next-line
+      onClick={() => console.log(props.post.description)}
+    >
       {props.post.description}
     </div>
   );
