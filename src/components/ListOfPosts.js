@@ -1,4 +1,5 @@
 import React from "react";
+import PostPreview from "./PostPreview";
 import "./ListOfPosts.css";
 
 // eslint-disable-next-line
@@ -7,9 +8,12 @@ function ListOfPosts(props) {
     <div>
       {
         props.posts.map((post, i) =>
-          <div key={i}>
+          <PostPreview
+            key={i}
+            post={post}
+          >
             {post.description}
-          </div>
+          </PostPreview>
         )
       }
     </div>
