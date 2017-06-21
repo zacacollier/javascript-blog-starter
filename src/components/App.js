@@ -3,10 +3,15 @@ import axios from "axios";
 import "./App.css";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      results: [],
+    };
+  }
   componentWillMount() {
     axios.get("https://api.github.com/users/zacacollier/gists")
-      // eslint-disable-next-line
-      .then(res => console.log(res))
+      .then(res => this.setState({ results: res.data }))
       // eslint-disable-next-line
       .catch(err => console.error(err));
   }
