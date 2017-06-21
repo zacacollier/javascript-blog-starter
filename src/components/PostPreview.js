@@ -4,8 +4,7 @@ import "./PostPreview.css";
 function PostPreview(props) {
   return (
     <div
-      // eslint-disable-next-line
-      onClick={() => console.log(props.post.description)}
+      onClick={() => props.handleClick(props.post)}
     >
       {props.post.description}
     </div>

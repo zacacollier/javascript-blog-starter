@@ -17,6 +17,9 @@ export default class App extends Component {
       // eslint-disable-next-line
       .catch(err => console.error(err));
   }
+  handleSelectPost(post) {
+    this.setState({ selectedPost: post });
+  }
   render() {
     return (
       <div className="App">
@@ -24,6 +27,7 @@ export default class App extends Component {
           <h2>React Blog Starter</h2>
         </div>
         <ListOfPosts
+          handlePostPreviewClick={post => this.handleSelectPost(post)}
           posts={this.state.results}
         />
       </div>

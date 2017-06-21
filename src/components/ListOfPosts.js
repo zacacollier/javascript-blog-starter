@@ -11,6 +11,7 @@ function ListOfPosts(props) {
           <PostPreview
             key={i}
             post={post}
+            handleClick={post => props.handlePostPreviewClick(post)}
           >
             {post.description}
           </PostPreview>
