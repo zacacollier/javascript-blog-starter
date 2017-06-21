@@ -5,7 +5,13 @@ import "./ListOfPosts.css";
 function ListOfPosts(props) {
   return (
     <div>
-      list
+      {
+        props.posts.map((post, i) =>
+          <div key={i}>
+            {post.description}
+          </div>
+        )
+      }
     </div>
   );
 }
