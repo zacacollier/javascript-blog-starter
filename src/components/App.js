@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import axios from "axios";
+import ListOfPosts from "./ListOfPosts";
 import "./App.css";
 
-class App extends Component {
+export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -21,9 +22,10 @@ class App extends Component {
         <div className="App-header">
           <h2>React Blog Starter</h2>
         </div>
+        <ListOfPosts
+          posts={this.state.results}
+        />
       </div>
     );
   }
 }
-
-export default App;
