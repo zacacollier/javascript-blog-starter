@@ -2,7 +2,6 @@ import React from "react";
 import PostPreview from "./PostPreview";
 import "./ListOfPosts.css";
 
-// eslint-disable-next-line
 function ListOfPosts(props) {
   return (
     <div>

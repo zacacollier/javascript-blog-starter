@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import ListOfPosts from "./ListOfPosts";
+import PostDetail from "./PostDetail";
 import "./App.css";
 
 export default class App extends Component {
@@ -23,9 +24,14 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
+        <div
+          className="App-header"
+        >
           <h2>React Blog Starter</h2>
         </div>
+        <PostDetail
+          post={this.state.selectedPost}
+        />
         <ListOfPosts
           handlePostPreviewClick={post => this.handleSelectPost(post)}
           posts={this.state.results}
